@@ -2,19 +2,17 @@
 
 *Analysis of suppliers and contracts for multiple Australian Government ICT Panels.*
 
-**Objective**
+### Objective
 
-The code contained in this repository scrapes data from public-facing Australian Government websites.
+To implement an analytics application that facilitates interactive analysis of ICT Suppliers to Australian Government.
 
-The scrapes will be automatically scheduled to run once a day.
-
-The scraped data will then be stored, transformed, cleaned, curated and presented using various technologies and tools including: 
+The application will scrape, store, transform, clean, curate and present data using various technologies and tools including: 
 - Apache Spark, BeautifulSoup
 - Python, Pandas, Jupyter
 - Parquet, JSON, MongoDB
 - Flask, Bootstrap, d3
 
-This document describes the incremental approach which loosely aligns with the levels of the Data Value Pyramid (from the bottom moving upwards) as described in Russell Jurny's book: Agile Data Science 2.0.
+The approach documented below is intended to align with the levels of the Data Value Pyramid (from the bottom moving upwards) as described in Russell Jurny's book: [Agile Data Science 2.0](http://shop.oreilly.com/product/0636920051619.do)
 
 ### Records
 
