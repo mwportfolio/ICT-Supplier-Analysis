@@ -4,7 +4,7 @@
 
 ### Objective
 
-To implement an analytics application that facilitates interactive analysis of ICT Suppliers to Australian Government.
+The objective is to implement an analytics application that facilitates interactive analysis of ICT Suppliers to the Australian Government.
 
 The application will scrape, store, transform, clean, curate and present data using various technologies and tools including: 
 - Apache Spark, BeautifulSoup
@@ -12,7 +12,7 @@ The application will scrape, store, transform, clean, curate and present data us
 - Parquet, JSON, MongoDB
 - Flask, Bootstrap, d3
 
-The approach documented below is intended to align with the levels of the Data Value Pyramid (from the bottom moving upwards) as described in Russell Jurny's book: [Agile Data Science 2.0](http://shop.oreilly.com/product/0636920051619.do)
+The approach documented below is intended to align with the levels of the Data Value Pyramid (from the bottom moving upwards) as described in Russell Jurney's book: [Agile Data Science 2.0](http://shop.oreilly.com/product/0636920051619.do)
 
 ### Records
 
