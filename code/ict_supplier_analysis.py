@@ -7,7 +7,7 @@ def hello():
 
 @app.route("/data/all_suppliers")
 def all_suppliers():
-    f = open("c:/Users/user/ict_panel_suppliers.jsonl", "r")
+    f = open("ict_panel_suppliers.jsonl", "r")
     suppliers_text = f.read()
     f.close()
     return suppliers_text
