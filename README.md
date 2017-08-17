@@ -44,7 +44,7 @@ The web application framework Flask is configured in the Python file [ict_suppli
 
 Getting list of all suppliers as JSON text using API endpoint
 
-![](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/screenshots/screenshot_app_all_suppliers.PNG?raw=true)
+![](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/screenshots/screenshot_app_all_suppliers_json.PNG?raw=true)
 
 ### Charts and Reports
 
