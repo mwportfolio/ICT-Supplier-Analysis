@@ -25,7 +25,7 @@ The tenders.gov.au website lists tenders and contract information for the public
 
 We want to extract the HTML data from tenders.gov.au and transform it into a more usable format for our application: JSONLines.
 
-The code in [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/code/scrape_ict_panel_suppliers.ipynb) performs this task and produces [ict_panel_suppliers.jsonl](https://github.com/mwportfolio/blob/master/datasets/ict_panel_suppliers.jsonl) containing the following elements:
+The code in the Jupyter Notebook [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/code/scrape_ict_panel_suppliers.ipynb) performs this task and produces the JSON file [ict_panel_suppliers.jsonl](https://github.com/mwportfolio/blob/master/datasets/ict_panel_suppliers.jsonl) containing the following elements:
 
 - Australian Business Number (ABN),
 - Supplier Name, 
@@ -37,6 +37,10 @@ The code in [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/IC
 
 
 **Web Framework & Presentation**
+
+The end user interface
+
+![pic](https://github.com/mwportfolio/blob/master/code/screenshot_run_flask_app.PNG)
 
 ### Charts and Reports
 
