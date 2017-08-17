@@ -1,4 +1,4 @@
-# ICT-Supplier-Analysis
+# ICT Supplier Analysis
 
 *Analysis of suppliers and contracts for Australian Government ICT Panels.*
 
