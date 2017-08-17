@@ -23,16 +23,14 @@ This section deals with integrating the analytics stack and enabling efficient d
 
 The tenders.gov.au website lists tenders and contract information for the public to view that can be scraped using tools like urllib.
 
-The code in [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/code/scrape_ict_panel_suppliers.ipynb) scrapes and saves the HTML as [ict_panel_suppliers.html](https://github.com/mwportfolio/blob/master/datasets/ict_panel_suppliers.html), then extracts the following supplier data into a Pandas DataFrame:
+We want to extract the HTML data from tenders.gov.au and transform it into a more usable format for our application: JSONLines.
+
+The code in [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/code/scrape_ict_panel_suppliers.ipynb) performs this task and produces [ict_panel_suppliers.jsonl](https://github.com/mwportfolio/blob/master/datasets/ict_panel_suppliers.jsonl) containing the following elements:
 
 - Australian Business Number (ABN),
 - Supplier Name, 
 - State, and
 - Postcode.
-
-The DataFrame is cleaned and saved in JSONLines format as [ict_panel_suppliers.jsonl](https://github.com/mwportfolio/blob/master/datasets/ict_panel_suppliers.jsonl).
-
-Now there is a clean list of ICT Suppliers in a portable format which can be used for further enrichment and ultimately presentation to our users.
 
 **Database Integration**
 
