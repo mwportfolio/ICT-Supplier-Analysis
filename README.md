@@ -40,7 +40,7 @@ The code in the Jupyter Notebook [scrape_ict_panel_suppliers.ipynb](https://gith
 
 The end user interface
 
-![pic](https://github.com/mwportfolio/blob/master/code/screenshot_run_flask_app.PNG)
+![](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/code/screenshot_run_flask_app.PNG?raw=true)
 
 ### Charts and Reports
 
