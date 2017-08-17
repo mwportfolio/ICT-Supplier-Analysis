@@ -25,7 +25,7 @@ The tenders.gov.au website lists tenders and contract information for the public
 
 This data can be easily scraped using tools like urllib.
 
-The code in [scrape_ict_panel_suppliers.ipynb](code/scrape_ict_panel_suppliers.ipynb) extracts supplier data including ABN, Name, State and Postcode from the website, formats and saves it as a JSONLines file.
+The code in [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/ICT-Supplier-Analysis/code/scrape_ict_panel_suppliers.ipynb) extracts supplier data including ABN, Name, State and Postcode from the website, formats and saves it as a JSONLines file.
 
 **Database Integration**
 
