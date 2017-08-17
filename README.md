@@ -38,9 +38,13 @@ The code in the Jupyter Notebook [scrape_ict_panel_suppliers.ipynb](https://gith
 
 **Web Framework & Presentation**
 
-The end user interface
+The web application framework Flask is configured in the Python file [ict_supplier_analysis.py](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/code/ict_supplier_analysis.py)
 
-![](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/code/screenshot_run_flask_app.PNG?raw=true)
+![](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/screenshots/screenshot_run_flask_app.PNG?raw=true)
+
+Getting list of all suppliers as JSON text using API endpoint
+
+![](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/screenshots/screenshot_app_all_suppliers.PNG?raw=true)
 
 ### Charts and Reports
 
