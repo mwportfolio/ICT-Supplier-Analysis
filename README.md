@@ -35,7 +35,7 @@ The first dataset we want to extract from tenders.gov.au is a list of ICT Suppli
 
 We will be extracting the HTML data and transforming it into the more usable JSON format for our application.
 
-The code in the Jupyter Notebook [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/jupyter_notebooks/scrape_ict_panel_suppliers.ipynb) performs this first task, and producing a JSON file as output [ict_panel_suppliers.jsonl](https://github.com/mwportfolio/blob/master/datasets/ict_panel_suppliers.jsonl) containing the following elements:
+The code in the Jupyter Notebook [scrape_ict_panel_suppliers.ipynb](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/jupyter_notebooks/scrape_ict_panel_suppliers.ipynb) performs this first task, and producing a JSON file as output [ict_panel_suppliers.jsonl](https://github.com/mwportfolio/ICT-Supplier-Analysis/blob/master/datasets/ict_panel_suppliers.jsonl) containing the following elements:
 
 - Australian Business Number (ABN),
 - Supplier Name, 
