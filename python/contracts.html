@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div>
+    <p class="lead">{{contract_count}} Contracts for {{supplier_name}}</p>
+
+    <style>
+            body {
+                font-family: "Arial", sans-serif;
+            }
+
+            .bar {
+                fill: #5f89ad;
+            }
+
+            .axis {
+                font-size: 13px;
+            }
+
+            .axis path,
+            .axis line {
+                fill: none;
+                display: none;
+            }
+
+            .label {
+                font-size: 13px;
+            }
+        </style>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <div id="graphic"></div>
+
+        <script>
+
+
+            //sort bars based on value
+            // data = data.sort(function (a, b) {
+            //     return d3.ascending(a.value, b.value);
+            // })
+
+          d3.json("/data/supplier/{{ABN}}/contracts_by_agency", function(error, data) {
+                console.log(data); // this is your data
+
+             //alert(json_data[0].Category)
+
+
+              var margin = {
+                  top: 15,
+                  right: 50,
+                  bottom: 15,
+                  left: 300
+              };
+
+              var width = 1000 - margin.left - margin.right,
+                  height = 400 - margin.top - margin.bottom;
+
+              var svg = d3.select("#graphic").append("svg")
+                  .attr("width", width + margin.left + margin.right)
+                  .attr("height", height + margin.top + margin.bottom)
+                  .append("g")
+                  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+              var x = d3.scale.linear()
+                  .range([0, width])
+                  .domain([0, d3.max(data, function (d) {
+                      return d.Value;
+                  })]);
+
+              var y = d3.scale.ordinal()
+                  .rangeRoundBands([height, 0], .1)
+                  .domain(data.map(function (d) {
+                      return d.Agency;
+                  }));
+
+              //make y axis to show bar names
+              var yAxis = d3.svg.axis()
+                  .scale(y)
+                  //no tick marks
+                  .tickSize(0)
+                  .orient("left");
+
+              var gy = svg.append("g")
+                  .attr("class", "y axis")
+                  .call(yAxis)
+
+              var bars = svg.selectAll(".bar")
+                  .data(data)
+                  .enter()
+                  .append("g")
+
+              //append rects
+              bars.append("rect")
+                  .attr("class", "bar")
+                  .attr("y", function (d) {
+                      return y(d.Agency);
+                  })
+                  .attr("height", y.rangeBand())
+                  .attr("x", 0)
+                  .attr("width", function (d) {
+                      return x(d.Value);
+                  });
+
+              //add a value label to the right of each bar
+              bars.append("text")
+                  .attr("class", "label")
+                  //y position of the label is halfway down the bar
+                  .attr("y", function (d) {
+                      return y(d.Agency) + y.rangeBand() / 2 + 4;
+                  })
+                  //x position is 3 pixels to the right of the bar
+                  .attr("x", function (d) {
+                      return x(d.Value) + 3;
+                  })
+                  .text(function (d) {
+                      return "$" + d3.format('.2s')(d.Value);
+                  });
+                });
+        </script>
+
+    <table class="table">
+      <thead>
+        <th>Agency</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Contract ID</th>
+        <th>Value (AUD)</th>
+      </thead>
+      <tbody>
+        {% for contract in contracts %}
+        <tr>
+          <td>{{contract.Agency}}</td>
+          <td>{{contract.Title}}</td>
+          <td>{{contract.Category}}</td>
+          <td>{{contract.ContractID}}</td>
+          <td>{{ "${:,.2f}".format(contract.Value) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

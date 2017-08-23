@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div>
+    <p class="lead">{{supplier_count}} Suppliers</p>
+    <table class="table">
+      <thead>
+        <th>ABN</th>
+        <th>Name</th>
+        <th>State</th>
+        <th>Postcode</th>
+      </thead>
+      <tbody>
+        {% for supplier in suppliers %}
+        <tr>
+          <td>{{supplier.ABN}}</td>
+          <td><a href="/contracts/supplier/{{supplier.ABN}}">{{supplier.Name}}</a></td>
+          <td>{{supplier.State}}</td>
+          <td>{{supplier.Postcode}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
